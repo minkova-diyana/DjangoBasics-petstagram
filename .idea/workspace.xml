@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b7e51e3-2a13-4db8-a0cf-68a0139c578f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/43f1175e-c9ef-48b1-a857-7257131d1d97.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/43f1175e-c9ef-48b1-a857-7257131d1d97.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/43f1175e-c9ef-48b1-a857-7257131d1d97/storage_v2/_src_/database/db_django.PKIGAQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/43f1175e-c9ef-48b1-a857-7257131d1d97/storage_v2/_src_/database/db_django.PKIGAQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petstagram/common/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/petstagram/common/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petstagram/common/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/petstagram/common/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petstagram/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/petstagram/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petstagram/pets/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/petstagram/pets/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petstagram/photos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/petstagram/photos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/pet-posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/pet-posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pets/pet-details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pets/pet-details-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/photos/photo-details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photos/photo-details-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +108,7 @@
       <updated>1730445862912</updated>
       <workItem from="1730445866892" duration="4136000" />
       <workItem from="1730450551545" duration="1378000" />
-      <workItem from="1730541472336" duration="818000" />
+      <workItem from="1730541472336" duration="10078000" />
     </task>
     <servers />
   </component>
