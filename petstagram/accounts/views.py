@@ -1,21 +1,22 @@
 from django.shortcuts import render
 
 
-def login(request):
-    return render(request, 'accounts/login-page.html')
-
-
+# Create your views here.
 def register(request):
     return render(request, 'accounts/register-page.html')
 
 
-def profile_delete(request, pk: int):
-    return render(request, 'accounts/profile-delete-page.html')
+def login_page(request):
+    return render(request, 'accounts/login-page.html')
 
 
-def profile_details(request, pk: int):
+def profile_details_page(request, pk):
     return render(request, 'accounts/profile-details-page.html')
 
 
-def profile_edit(request, pk: int):
+def profile_edit_page(request, pk):
     return render(request, 'accounts/profile-edit-page.html')
+
+
+def profile_delete_page(request, pk):
+    return render(request, 'accounts/profile-delete-page.html')

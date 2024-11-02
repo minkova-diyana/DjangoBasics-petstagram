@@ -1,8 +1,6 @@
-from django.conf import settings
-from django.conf.urls.static import static
+
 from django.contrib import admin
-from django.urls import path
-from django.urls import include
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -10,4 +8,6 @@ urlpatterns = [
     path('accounts/', include('petstagram.accounts.urls')),
     path('pets/', include('petstagram.pets.urls')),
     path('photos/', include('petstagram.photos.urls')),
+
+
 ]

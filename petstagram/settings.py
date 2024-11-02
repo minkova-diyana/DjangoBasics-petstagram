@@ -20,20 +20,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8oxkf^-a08(*#c$*$m^gl7d%%^ld)h2su1(ixr9e#2my+^p*xm'
+SECRET_KEY = 'django-insecure-6#i4c90z&qyqt_(0)^qk9mb81(p8pivl+&%+!f^ygc6re5j=en'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 MY_APPS = [
-    'petstagram.accounts',
     'petstagram.common',
+    'petstagram.accounts',
     'petstagram.photos',
-    'petstagram.pets',
+    'petstagram.pets'
 ]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -60,9 +60,7 @@ ROOT_URLCONF = 'petstagram.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR / 'petstagram/templates'
-        ]
+        'DIRS': [BASE_DIR / 'templates']
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -81,11 +79,14 @@ WSGI_APPLICATION = 'petstagram.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "db_django",
+        "USER": "postgres",
+        "PASSWORD": "admin",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
@@ -126,9 +127,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = (
-        BASE_DIR / 'petstagram/static',
-)
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
