@@ -7,9 +7,11 @@ from petstagram.photos.validators import SizeImgValidator
 
 # Create your models here.
 class Photo(models.Model):
-    photo = models.ImageField(validators=[
-        SizeImgValidator,
-    ])
+    photo = models.ImageField(
+        upload_to='',
+        validators=[
+            SizeImgValidator,
+        ])
     description = models.TextField(
         max_length=300,
         validators=[
@@ -23,4 +25,3 @@ class Photo(models.Model):
     date_of_publication = models.DateField(
         auto_now=True
     )
-

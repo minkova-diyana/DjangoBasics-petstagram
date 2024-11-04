@@ -25,6 +25,24 @@
                 	<span>{{ photo.location}}</span>
                 {% endif %} 
                 
+            
+                 {% if photo_page %}
+                    <div class="edit-delete-btns">
+        
+                        <!-- Link to Edit Pet Photo Page -->
+                        <a href="{% url 'edit-photo' photo.pk %}">
+                            <img class="edit-img" src="{% static 'images/edit-pen-icon-6.jpg' %}"
+                                 alt="edit button">
+                        </a>
+        
+                        <!-- Link to Delete Pet Photo Page -->
+                        <a href="{% url 'photo-delete' photo.pk %}">
+                            <img class="bin-img" src="{% static 'images/icon-remove-22.jpg' %}"
+                                 alt="bin button">
+                        </a>
+                    </div>
+                {% endif %}
+            
             </h3>
         </div>
         <!--  -->
@@ -81,6 +99,7 @@
         {% endif %}
 
         <h5 class="postTime">{{ photo.date_of_publication}}</h5>
+    
         {% if photo_page %}
         	<div class="comments">
                         <div class="top">
@@ -99,10 +118,10 @@
                                         <!-- User First and/or Last Name or username-->
                                         <a href="">Steven Ivanov</a>
                                         <!-- User Comment -->
-                                        - OMG where can i get one
+                                        {{ comment.text }}
                                     </p>
                                 </div>
-                                <span>Sept. 20, 2022, 5:02 p.m.</span>
+                                <span>{{ comment.date_time_of_publication }}</span>
                             </div>
                         </div>
                     </div>
@@ -110,10 +129,9 @@
         <!-- add comments section -->
         <div class="addComments">
 
-            <form method="post" action="add comment">
-                <label for="id_body">Body:</label>
-                <textarea name="body" cols="40" rows="10" placeholder="Add comment..." maxlength="300"
-                          required="" id="id_body"></textarea>
+            <form method="post" action="{% url 'comment' photo.pk %}">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
                 <button type="submit">Post</button>
             </form>
         </div>
